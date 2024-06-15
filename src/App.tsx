@@ -1,5 +1,11 @@
+import Home from './components/screens/home/Home'
+
 function App() {
-  return <div className="App font-bold">My app</div>
+  return (
+    <>
+      <Home />
+    </>
+  )
 }
 
 export default App
