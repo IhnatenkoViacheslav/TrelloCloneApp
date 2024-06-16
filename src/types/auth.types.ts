@@ -1,4 +1,5 @@
 export interface IAuthForm {
+  name?: string
   email: string
   password: string
 }
@@ -14,6 +15,10 @@ export interface IUser {
 }
 
 export interface IAuthResponse {
-  accessToken: string
-  user: IUser
+  email: string
+  expiresIn: string
+  idToken: string
+  kind: string
+  localId: string
+  refreshToken: string
 }
