@@ -10,9 +10,12 @@ export enum EnumTokens {
 export const authService = {
   async main(type: 'Up' | 'InWithPassword', data: IAuthForm) {
     const response = await axios.post<IAuthResponse>(
-      `https://identitytoolkit.googleapis.com/v1/accounts:sign${type}?key=${process.env.API_KEY}`,
+      `https://identitytoolkit.googleapis.com/v1/accounts:sign${type}?key=${process.env.REACT_APP_API_KEY}`,
       data
     )
+    if (response) {
+      console.log(response)
+    }
 
     if (response.data.idToken) saveTokenToStorage(response.data.idToken)
 

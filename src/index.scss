@@ -71,3 +71,21 @@ input:checked.defaultCheckbox::before {
     opacity: 1;
   }
 }
+
+.gradient_background {
+  background-image: linear-gradient(
+    to left bottom,
+    #03020a,
+    #1e1b33,
+    #372e5d,
+    #574088,
+    #7c51b4,
+    #8652c4,
+    #9154d4,
+    #9c54e4,
+    #8748dc,
+    #703dd4,
+    #5732cd,
+    #3628c5
+  );
+}
