@@ -32,7 +32,7 @@ export const Field = forwardRef<HTMLInputElement, InputFieldProps>(
           disabled={disabled}
           id={id}
           placeholder={placeholder}
-          className=""
+          className={`bg-[#1E293B] border-2 border-[#2F3B49] py-2 pl-10 pr-2 rounded-3xl min-w-80 outline-none placeholder-current ${disabled === true ? '!border-none' : state === 'error' ? 'border-primary-500' : state === 'success' ? 'border-green-500' : ''}`}
           onKeyDown={(event) => {
             if (
               isNumber &&

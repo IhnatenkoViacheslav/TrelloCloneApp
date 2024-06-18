@@ -1,13 +1,13 @@
 import { FC, PropsWithChildren } from 'react'
 import { Toaster } from 'sonner'
-import Button from './ui/Button'
+import { Button } from './ui/Button'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <header className="bg-[#EFEFEF] h-16 w-full flex justify-between px-8 text-xs">
+      <header className="bg-[#000000ea] h-16 w-full flex justify-between px-8 text-xs">
         <div className="flex items-center gap-10">
-          <Button buttonText="All boards" />
+          <Button>All boards</Button>
           <input
             placeholder="Search"
             className="py-2 bg-white px-4 rounded-xl outline-none"
@@ -15,7 +15,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
           />
         </div>
         <div className="flex items-center gap-10">
-          <Button buttonText="+ Add board" />
+          <Button>+ Add board</Button>
           <div>
             <img src="" alt="" />
             <p>Account name</p>

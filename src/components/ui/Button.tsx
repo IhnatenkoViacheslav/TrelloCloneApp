@@ -1,12 +1,14 @@
-import { FC } from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 
-interface IButton {
-  buttonText: string
-  action?: () => void
+type TypeButton = ButtonHTMLAttributes<HTMLButtonElement>
+
+export const Button: FC<TypeButton> = ({ children, className, ...rest }) => {
+  return (
+    <button
+      className="linear rounded-2xl bg-transparent border-2 border-primary py-2 px-7 text-base font-medium text-white transition-all hover:bg-primary active:bg-brand-700"
+      {...rest}
+    >
+      {children}
+    </button>
+  )
 }
-
-const Button: FC<IButton> = ({ buttonText, action }) => {
-  return <button className="py-2 bg-white px-4 rounded-xl">{buttonText}</button>
-}
-
-export default Button
